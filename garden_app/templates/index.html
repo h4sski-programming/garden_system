@@ -4,22 +4,10 @@
 
 {% block content %}
 
-<div class="row mx-3 ">
+<div class="row mx-3 my-3">
     <h1>Hello at h4sski_garden_system</h1>
 </div>
 
-<div class="">
-    <h4>Zones list</h4>
-
-    {% for zone_name, zone_state in zones.items() %}
-    <div class="row">
-        <div class="col">{{ zone_name }}</div>
-        <div class="col">{{ zone_state }}</div>
-    </div>
-    {% endfor %}
-</div>
-
-<hr/>
 
 <div class="">
     <table class="table table-sm">
@@ -28,7 +16,7 @@
         </thead>
 
         <tbody>
-        {% for zone_name, zone_state in zones.items() %}
+        {% for zone_name, zone_state in zones.items %}
         <tr class="row mx-0">
             <td class="col-2">{{ zone_name }}</td>
             <td class="col-1">
@@ -42,5 +30,22 @@
         {% endfor %}
         </tbody>
     </table>
+    
 </div>
+
+
+<hr/>
+
+
+<div class="">
+    <h4>Zones list</h4>
+
+    {% for zone_name, zone_state in zones.items %}
+    <div class="row">
+        <div class="col">{{ zone_name }}</div>
+        <div class="col">{{ zone_state }}</div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

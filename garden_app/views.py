@@ -13,4 +13,4 @@ def index(request):
         },
         'temp': 'temp'
     }
-    return render(request, 'garden_app/index.html', context)
+    return render(request=request, template_name='index.html', context=context)

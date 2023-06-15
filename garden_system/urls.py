@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+app_name = 'garden_system'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('garden_app/', include('garden_app.urls')),
+    path('', include('garden_app.urls')),
 ]
